@@ -2,10 +2,10 @@
 
 # Update the Kali keyring
 echo "Downloading the latest Kali keyring..."
-wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2023.1_all.deb -O /tmp/kali-archive-keyring.deb
+wget https://archive.kali.org/archive-keyring/kali-archive-keyring.gpg -O /tmp/kali-archive-keyring.gpg
 
 echo "Installing the Kali keyring..."
-sudo dpkg -i /tmp/kali-archive-keyring.deb
+sudo cp /tmp/kali-archive-keyring.gpg /etc/apt/trusted.gpg.d/
 
 # Update the sources list
 echo "Updating sources list..."
